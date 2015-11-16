@@ -1,18 +1,18 @@
 //
-//  ViewController.m
+//  CategoriesTableViewController.m
 //  Test_TillerSystems
 //
 //  Created by Thibault Le Cornec on 15/11/15.
 //  Copyright © 2015 TillerSystems. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "CategoriesTableViewController.h"
 
-@interface ViewController ()
+@interface CategoriesTableViewController ()
 
 @end
 
-@implementation ViewController
+@implementation CategoriesTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

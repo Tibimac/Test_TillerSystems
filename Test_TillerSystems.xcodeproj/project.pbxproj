@@ -9,9 +9,15 @@
 /* Begin PBXBuildFile section */
 		52133C811BF8E41A00020480 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52133C801BF8E41A00020480 /* main.m */; };
 		52133C841BF8E41A00020480 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52133C831BF8E41A00020480 /* AppDelegate.m */; };
-		52133C871BF8E41A00020480 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52133C861BF8E41A00020480 /* ViewController.m */; };
+		52133C871BF8E41A00020480 /* CategoriesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52133C861BF8E41A00020480 /* CategoriesTableViewController.m */; };
 		52133C8C1BF8E41B00020480 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52133C8B1BF8E41B00020480 /* Assets.xcassets */; };
 		52133C8F1BF8E41B00020480 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52133C8D1BF8E41B00020480 /* LaunchScreen.storyboard */; };
+		52133C981BF8E83B00020480 /* ProductsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52133C971BF8E83B00020480 /* ProductsTableViewController.m */; };
+		52133C9B1BF8EDDB00020480 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 52133C9A1BF8EDDB00020480 /* NetworkManager.m */; };
+		52133CC01BFA0F4800020480 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 52133CBF1BFA0F4800020480 /* DataManager.m */; };
+		52133CC41BFA0FC200020480 /* Categorie.m in Sources */ = {isa = PBXBuildFile; fileRef = 52133CC31BFA0FC200020480 /* Categorie.m */; };
+		52133CC71BFA0FDE00020480 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 52133CC61BFA0FDE00020480 /* Product.m */; };
+		52AA61E81BFA27590098E8DB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 52AA61EA1BFA27590098E8DB /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,11 +25,24 @@
 		52133C801BF8E41A00020480 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		52133C821BF8E41A00020480 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		52133C831BF8E41A00020480 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		52133C851BF8E41A00020480 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		52133C861BF8E41A00020480 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		52133C851BF8E41A00020480 /* CategoriesTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoriesTableViewController.h; sourceTree = "<group>"; };
+		52133C861BF8E41A00020480 /* CategoriesTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CategoriesTableViewController.m; sourceTree = "<group>"; };
 		52133C8B1BF8E41B00020480 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52133C8E1BF8E41B00020480 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52133C901BF8E41B00020480 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52133C961BF8E83B00020480 /* ProductsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductsTableViewController.h; sourceTree = "<group>"; };
+		52133C971BF8E83B00020480 /* ProductsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductsTableViewController.m; sourceTree = "<group>"; };
+		52133C991BF8EDDB00020480 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetworkManager.h; path = Managers/NetworkManager.h; sourceTree = "<group>"; };
+		52133C9A1BF8EDDB00020480 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetworkManager.m; path = Managers/NetworkManager.m; sourceTree = "<group>"; };
+		52133CBE1BFA0F4800020480 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataManager.h; path = Managers/DataManager.h; sourceTree = "<group>"; };
+		52133CBF1BFA0F4800020480 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataManager.m; path = Managers/DataManager.m; sourceTree = "<group>"; };
+		52133CC21BFA0FC200020480 /* Categorie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Categorie.h; path = Models/Categorie.h; sourceTree = "<group>"; };
+		52133CC31BFA0FC200020480 /* Categorie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Categorie.m; path = Models/Categorie.m; sourceTree = "<group>"; };
+		52133CC51BFA0FDE00020480 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Product.h; path = Models/Product.h; sourceTree = "<group>"; };
+		52133CC61BFA0FDE00020480 /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Product.m; path = Models/Product.m; sourceTree = "<group>"; };
+		52AA61E91BFA27590098E8DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		52AA61EB1BFA27740098E8DB /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		52AA61EC1BFA27740098E8DB /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +77,9 @@
 			children = (
 				52133C821BF8E41A00020480 /* AppDelegate.h */,
 				52133C831BF8E41A00020480 /* AppDelegate.m */,
-				52133C851BF8E41A00020480 /* ViewController.h */,
-				52133C861BF8E41A00020480 /* ViewController.m */,
+				52133CC11BFA0F9700020480 /* Models */,
+				52133C9C1BF8EDDF00020480 /* Managers */,
+				52133C9D1BF8EDE700020480 /* Controllers */,
 				52133C8B1BF8E41B00020480 /* Assets.xcassets */,
 				52133C8D1BF8E41B00020480 /* LaunchScreen.storyboard */,
 				52133C901BF8E41B00020480 /* Info.plist */,
@@ -71,9 +91,43 @@
 		52133C7F1BF8E41A00020480 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				52AA61EA1BFA27590098E8DB /* Localizable.strings */,
 				52133C801BF8E41A00020480 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		52133C9C1BF8EDDF00020480 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				52133C991BF8EDDB00020480 /* NetworkManager.h */,
+				52133C9A1BF8EDDB00020480 /* NetworkManager.m */,
+				52133CBE1BFA0F4800020480 /* DataManager.h */,
+				52133CBF1BFA0F4800020480 /* DataManager.m */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		52133C9D1BF8EDE700020480 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				52133C851BF8E41A00020480 /* CategoriesTableViewController.h */,
+				52133C861BF8E41A00020480 /* CategoriesTableViewController.m */,
+				52133C961BF8E83B00020480 /* ProductsTableViewController.h */,
+				52133C971BF8E83B00020480 /* ProductsTableViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		52133CC11BFA0F9700020480 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				52133CC21BFA0FC200020480 /* Categorie.h */,
+				52133CC31BFA0FC200020480 /* Categorie.m */,
+				52133CC51BFA0FDE00020480 /* Product.h */,
+				52133CC61BFA0FDE00020480 /* Product.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -117,6 +171,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = 52133C731BF8E41A00020480;
 			productRefGroup = 52133C7D1BF8E41A00020480 /* Products */;
@@ -134,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52133C8F1BF8E41B00020480 /* LaunchScreen.storyboard in Resources */,
+				52AA61E81BFA27590098E8DB /* Localizable.strings in Resources */,
 				52133C8C1BF8E41B00020480 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,9 +201,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52133C871BF8E41A00020480 /* ViewController.m in Sources */,
+				52133C871BF8E41A00020480 /* CategoriesTableViewController.m in Sources */,
+				52133CC41BFA0FC200020480 /* Categorie.m in Sources */,
+				52133CC01BFA0F4800020480 /* DataManager.m in Sources */,
 				52133C841BF8E41A00020480 /* AppDelegate.m in Sources */,
 				52133C811BF8E41A00020480 /* main.m in Sources */,
+				52133CC71BFA0FDE00020480 /* Product.m in Sources */,
+				52133C9B1BF8EDDB00020480 /* NetworkManager.m in Sources */,
+				52133C981BF8E83B00020480 /* ProductsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,8 +219,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				52133C8E1BF8E41B00020480 /* Base */,
+				52AA61EB1BFA27740098E8DB /* fr */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		52AA61EA1BFA27590098E8DB /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52AA61E91BFA27590098E8DB /* en */,
+				52AA61EC1BFA27740098E8DB /* fr */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -252,6 +323,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Test_TillerSystems/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "TillerSystems.Test-TillerSystems";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -263,6 +335,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Test_TillerSystems/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "TillerSystems.Test-TillerSystems";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -288,6 +361,7 @@
 				52133C951BF8E41B00020480 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
