@@ -18,9 +18,12 @@
 		52133CC41BFA0FC200020480 /* Categorie.m in Sources */ = {isa = PBXBuildFile; fileRef = 52133CC31BFA0FC200020480 /* Categorie.m */; };
 		52133CC71BFA0FDE00020480 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 52133CC61BFA0FDE00020480 /* Product.m */; };
 		52AA61E81BFA27590098E8DB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 52AA61EA1BFA27590098E8DB /* Localizable.strings */; };
+		AEF9516C635F45F8DFE47A48 /* libPods-Test_TillerSystems.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86326F6CF17AC786BA310E0E /* libPods-Test_TillerSystems.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10F124C3B4BC5BB0C2DBFAC3 /* Pods-Test_TillerSystems.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test_TillerSystems.release.xcconfig"; path = "Pods/Target Support Files/Pods-Test_TillerSystems/Pods-Test_TillerSystems.release.xcconfig"; sourceTree = "<group>"; };
+		46CF5A8C1DCE12C058F6038C /* Pods-Test_TillerSystems.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test_TillerSystems.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Test_TillerSystems/Pods-Test_TillerSystems.debug.xcconfig"; sourceTree = "<group>"; };
 		52133C7C1BF8E41A00020480 /* Test_TillerSystems.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test_TillerSystems.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52133C801BF8E41A00020480 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		52133C821BF8E41A00020480 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -43,6 +46,7 @@
 		52AA61E91BFA27590098E8DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		52AA61EB1BFA27740098E8DB /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		52AA61EC1BFA27740098E8DB /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		86326F6CF17AC786BA310E0E /* libPods-Test_TillerSystems.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Test_TillerSystems.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEF9516C635F45F8DFE47A48 /* libPods-Test_TillerSystems.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +66,8 @@
 			children = (
 				52133C7E1BF8E41A00020480 /* Test_TillerSystems */,
 				52133C7D1BF8E41A00020480 /* Products */,
+				B96FBA37E2F639DE88CFFE84 /* Pods */,
+				FA7A9AE113B596129CF4A57B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,6 +137,23 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		B96FBA37E2F639DE88CFFE84 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				46CF5A8C1DCE12C058F6038C /* Pods-Test_TillerSystems.debug.xcconfig */,
+				10F124C3B4BC5BB0C2DBFAC3 /* Pods-Test_TillerSystems.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FA7A9AE113B596129CF4A57B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				86326F6CF17AC786BA310E0E /* libPods-Test_TillerSystems.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,9 +161,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52133C931BF8E41B00020480 /* Build configuration list for PBXNativeTarget "Test_TillerSystems" */;
 			buildPhases = (
+				73CF7E622F8DDBEAD3940F21 /* Check Pods Manifest.lock */,
 				52133C781BF8E41A00020480 /* Sources */,
 				52133C791BF8E41A00020480 /* Frameworks */,
 				52133C7A1BF8E41A00020480 /* Resources */,
+				B70028E047E5EA89ABDF2383 /* Embed Pods Frameworks */,
+				9CAC4574F2EE39F2E7FB9D6B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -195,6 +222,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		73CF7E622F8DDBEAD3940F21 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9CAC4574F2EE39F2E7FB9D6B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Test_TillerSystems/Pods-Test_TillerSystems-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B70028E047E5EA89ABDF2383 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Test_TillerSystems/Pods-Test_TillerSystems-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		52133C781BF8E41A00020480 /* Sources */ = {
@@ -320,6 +395,7 @@
 		};
 		52133C941BF8E41B00020480 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46CF5A8C1DCE12C058F6038C /* Pods-Test_TillerSystems.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Test_TillerSystems/Info.plist;
@@ -332,6 +408,7 @@
 		};
 		52133C951BF8E41B00020480 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10F124C3B4BC5BB0C2DBFAC3 /* Pods-Test_TillerSystems.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Test_TillerSystems/Info.plist;
