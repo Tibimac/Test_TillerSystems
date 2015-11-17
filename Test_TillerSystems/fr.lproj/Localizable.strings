@@ -6,6 +6,8 @@
   Copyright © 2015 TillerSystems. All rights reserved.
 */
 
+"Loading_In_Progress" = "Chargement...";
+
 "Categories_Title" = "Catégories";
 "products" = "produit(s)";
 

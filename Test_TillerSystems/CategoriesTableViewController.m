@@ -10,6 +10,7 @@
 #import "ProductsTableViewController.h"
 #import "DataManager.h"
 #import "Categorie.h"
+#import <SVProgressHUD.h>
 
 
 
@@ -39,11 +40,13 @@ static NSString *kCellIdentifier = @"categorieCell";
     dataManager = [DataManager sharedInstance];
     
     CategoriesTableViewController __weak *weakSelf = self;
+    [SVProgressHUD showWithStatus:NSLocalizedString(@"Loading_In_Progress", nil)];
     [DataManager loadDataWithCompletionBlock:
      ^{
         dispatch_async(dispatch_get_main_queue(),
         ^{
-             [weakSelf reloadData];
+            [weakSelf reloadData];
+            [SVProgressHUD dismiss];
         });
      }];
 }
