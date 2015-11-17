@@ -10,6 +10,7 @@
 #import "DataManager.h"
 #import "Categorie.h"
 #import "Product.h"
+#import "Helpers.h"
 
 
 
@@ -72,6 +73,11 @@ static NSString *kCellIdentifier = @"productCell";
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     
     Product *currentProduct = [currentProducts objectAtIndex:indexPath.row];
+    if ([[currentProduct color] isEqual:[NSNull null]] == NO)
+    {
+        CGSize size = CGSizeMake(40, 40);
+        [[cell imageView] setImage:[UIImage imageFromColor:[UIColor colorWithHexString:[currentProduct color]] size:size]];
+    }
     [[cell textLabel] setText:[currentProduct name]];
     
     // Configuration of the price in the current locale for currency (inherit from current region) of the device

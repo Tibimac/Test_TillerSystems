@@ -12,8 +12,9 @@
 @interface Categorie : NSObject
 
 @property (strong, nonatomic) NSString *name;
-@property (strong, nonatomic) NSNumber *position;
 @property (strong, nonatomic) NSArray <Product*> *products;
+@property (strong, nonatomic) NSString *color;
+@property (strong, nonatomic) NSNumber *position;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dic;
 

@@ -14,6 +14,7 @@
 {
     return [self initWithName:dic[@"name"]
                         price:dic[@"price"]
+                        color:dic[@"color"]
                   andPosition:dic[@"position"]];
 }
 
@@ -21,6 +22,7 @@
 
 - (instancetype)initWithName:(NSString *)name
                        price:(NSNumber *)price
+                       color:(NSString *)color
                  andPosition:(NSNumber *)position
 {
     self = [super init];
@@ -29,6 +31,7 @@
     {
         _name = name;
         _price = price;
+        _color = color;
         _position = position;
     }
     

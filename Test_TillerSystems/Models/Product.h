@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSNumber *price;
+@property (strong, nonatomic) NSString *color;
 @property (strong, nonatomic) NSNumber *position;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dic;

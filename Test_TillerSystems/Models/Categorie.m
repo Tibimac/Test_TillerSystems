@@ -15,6 +15,7 @@
 {
     return [self initWithName:dic[@"name"]
                      products:dic[@"products"]
+                        color:dic[@"color"]
                   andPosition:dic[@"position"]];
 }
 
@@ -22,6 +23,7 @@
 
 - (instancetype)initWithName:(NSString *)name
                     products:(NSArray *)products
+                       color:(NSString *)color
                  andPosition:(NSNumber *)position
 {
     self = [super init];
@@ -30,6 +32,7 @@
     {
         _name = name;
         _position = position;
+        _color = color;
         
         NSMutableArray *tempProducts = [[NSMutableArray alloc] init];
         

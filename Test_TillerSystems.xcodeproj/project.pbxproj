@@ -18,6 +18,8 @@
 		52133CC41BFA0FC200020480 /* Categorie.m in Sources */ = {isa = PBXBuildFile; fileRef = 52133CC31BFA0FC200020480 /* Categorie.m */; };
 		52133CC71BFA0FDE00020480 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 52133CC61BFA0FDE00020480 /* Product.m */; };
 		52AA61E81BFA27590098E8DB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 52AA61EA1BFA27590098E8DB /* Localizable.strings */; };
+		52BE67071BFAD30B0037F0AB /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BE67061BFAD30B0037F0AB /* UIColor+HexString.m */; };
+		52BE670A1BFAF7940037F0AB /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BE67091BFAF7940037F0AB /* UIImage+Color.m */; };
 		AEF9516C635F45F8DFE47A48 /* libPods-Test_TillerSystems.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86326F6CF17AC786BA310E0E /* libPods-Test_TillerSystems.a */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +48,11 @@
 		52AA61E91BFA27590098E8DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		52AA61EB1BFA27740098E8DB /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		52AA61EC1BFA27740098E8DB /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		52BE67051BFAD30B0037F0AB /* UIColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexString.h"; sourceTree = "<group>"; };
+		52BE67061BFAD30B0037F0AB /* UIColor+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexString.m"; sourceTree = "<group>"; };
+		52BE67081BFAF7940037F0AB /* UIImage+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
+		52BE67091BFAF7940037F0AB /* UIImage+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
+		52BE670C1BFAF80A0037F0AB /* Helpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Helpers.h; sourceTree = "<group>"; };
 		86326F6CF17AC786BA310E0E /* libPods-Test_TillerSystems.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Test_TillerSystems.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -84,8 +91,8 @@
 			children = (
 				52133C821BF8E41A00020480 /* AppDelegate.h */,
 				52133C831BF8E41A00020480 /* AppDelegate.m */,
-				52133CC11BFA0F9700020480 /* Models */,
 				52133C9C1BF8EDDF00020480 /* Managers */,
+				52133CC11BFA0F9700020480 /* Models */,
 				52133C9D1BF8EDE700020480 /* Controllers */,
 				52133C8B1BF8E41B00020480 /* Assets.xcassets */,
 				52133C8D1BF8E41B00020480 /* LaunchScreen.storyboard */,
@@ -98,6 +105,8 @@
 		52133C7F1BF8E41A00020480 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				52BE670C1BFAF80A0037F0AB /* Helpers.h */,
+				52BE670B1BFAF7CA0037F0AB /* Categories */,
 				52AA61EA1BFA27590098E8DB /* Localizable.strings */,
 				52133C801BF8E41A00020480 /* main.m */,
 			);
@@ -135,6 +144,17 @@
 				52133CC61BFA0FDE00020480 /* Product.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		52BE670B1BFAF7CA0037F0AB /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				52BE67081BFAF7940037F0AB /* UIImage+Color.h */,
+				52BE67091BFAF7940037F0AB /* UIImage+Color.m */,
+				52BE67051BFAD30B0037F0AB /* UIColor+HexString.h */,
+				52BE67061BFAD30B0037F0AB /* UIColor+HexString.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		B96FBA37E2F639DE88CFFE84 /* Pods */ = {
@@ -279,9 +299,11 @@
 				52133C871BF8E41A00020480 /* CategoriesTableViewController.m in Sources */,
 				52133CC41BFA0FC200020480 /* Categorie.m in Sources */,
 				52133CC01BFA0F4800020480 /* DataManager.m in Sources */,
+				52BE67071BFAD30B0037F0AB /* UIColor+HexString.m in Sources */,
 				52133C841BF8E41A00020480 /* AppDelegate.m in Sources */,
 				52133C811BF8E41A00020480 /* main.m in Sources */,
 				52133CC71BFA0FDE00020480 /* Product.m in Sources */,
+				52BE670A1BFAF7940037F0AB /* UIImage+Color.m in Sources */,
 				52133C9B1BF8EDDB00020480 /* NetworkManager.m in Sources */,
 				52133C981BF8E83B00020480 /* ProductsTableViewController.m in Sources */,
 			);

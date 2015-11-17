@@ -67,6 +67,7 @@ static NSString* const providerTokenKey = @"77429162-39d5-11e5-b995-0ab7c77dd804
     
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"position" ascending:YES];
     [tempCategories sortedArrayUsingDescriptors:@[sortDescriptor]];
+    _categories = nil;
     _categories = [tempCategories copy];
 }
 

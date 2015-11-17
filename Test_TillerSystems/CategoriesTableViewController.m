@@ -11,6 +11,7 @@
 #import "DataManager.h"
 #import "Categorie.h"
 #import <SVProgressHUD.h>
+#import "Helpers.h"
 
 
 
@@ -37,25 +38,35 @@ static NSString *kCellIdentifier = @"categorieCell";
     [[self tableView] setDataSource:self];
     [[self tableView] setDelegate:self];
     
-    dataManager = [DataManager sharedInstance];
+    [self setRefreshControl:[[UIRefreshControl alloc] init]];
+    [[self refreshControl] addTarget:self
+                              action:@selector(refreshData)
+                    forControlEvents:UIControlEventValueChanged];
     
+    dataManager = [DataManager sharedInstance];
+    [self refreshData];
+}
+
+
+
+- (void)refreshData
+{
     CategoriesTableViewController __weak *weakSelf = self;
     [SVProgressHUD showWithStatus:NSLocalizedString(@"Loading_In_Progress", nil)];
     [DataManager loadDataWithCompletionBlock:
      ^{
-        dispatch_async(dispatch_get_main_queue(),
-        ^{
-            [weakSelf reloadData];
-            [SVProgressHUD dismiss];
-        });
+         dispatch_async(dispatch_get_main_queue(),
+                        ^{
+                            [[weakSelf tableView] reloadData];
+                            [SVProgressHUD dismiss];
+                            if ([[weakSelf refreshControl] isRefreshing])
+                            {
+                                [[weakSelf refreshControl] endRefreshing];
+                            }
+                        });
      }];
 }
 
-     
-- (void)reloadData
-{
-    [[self tableView] reloadData];
-}
 
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -82,17 +93,26 @@ static NSString *kCellIdentifier = @"categorieCell";
     }
     
     Categorie *currentCategorie = [[dataManager categories] objectAtIndex:indexPath.row];
+    if ([[currentCategorie color] isEqual:[NSNull null]] == NO)
+    {
+        CGSize size = CGSizeMake(40, 40);
+        [[cell imageView] setImage:[UIImage imageFromColor:[UIColor colorWithHexString:[currentCategorie color]] size:size]];
+    }
     [[cell textLabel] setText:[currentCategorie name]];
     [[cell detailTextLabel] setText:[NSString stringWithFormat:@"%ld %@", (unsigned long)[[currentCategorie products] count], NSLocalizedString(@"products", nil)]];
     
     // If current categorie have 0 product the cell configuration is different to represent it.
     if ([[currentCategorie products] count] == 0)
     {
+        [[cell contentView] setAlpha:0.5];
+        [[cell imageView] setAlpha:0.2];
         [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
         [cell setAccessoryType:UITableViewCellAccessoryNone];
     }
     else
     {
+        [[cell contentView] setAlpha:1.0];
+        [[cell imageView] setAlpha:1.0];
         [cell setSelectionStyle:UITableViewCellSelectionStyleDefault];
         [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     }
