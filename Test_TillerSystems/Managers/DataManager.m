@@ -36,7 +36,9 @@ static NSString* const providerTokenKey = @"77429162-39d5-11e5-b995-0ab7c77dd804
     return sharedInstance;
 }
 
-+ (void)loadData
+
+
++ (void)loadDataWithCompletionBlock:(void (^)(void))completionBlock
 {
     [[NetworkManager sharedInstance] dataForKey:@"inventary"
                                  forClientToken:clientTokenKey
@@ -46,6 +48,7 @@ static NSString* const providerTokenKey = @"77429162-39d5-11e5-b995-0ab7c77dd804
          [[DataManager sharedInstance] initDataWithDictionary:[NSJSONSerialization JSONObjectWithData:data
                                                                                               options:NSJSONReadingMutableContainers
                                                                                                 error:&error]];
+         completionBlock();
      }];
 }
 

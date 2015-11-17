@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CategoriesTableViewController : UITableViewController
+@interface CategoriesTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 
 
 @end

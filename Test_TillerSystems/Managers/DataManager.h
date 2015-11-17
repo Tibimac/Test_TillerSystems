@@ -14,6 +14,6 @@
 @property (strong, nonatomic) NSArray <Categorie*> __block *categories;
 
 + (instancetype)sharedInstance;
-+ (void)loadData;
++ (void)loadDataWithCompletionBlock:(void (^)(void))completionBlock;
 
 @end

@@ -10,4 +10,6 @@
 
 @interface ProductsTableViewController : UITableViewController
 
+@property (strong, nonatomic) NSIndexPath *currentCategorieIndexPath;
+
 @end

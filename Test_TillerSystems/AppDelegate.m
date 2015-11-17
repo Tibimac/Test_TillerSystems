@@ -10,17 +10,12 @@
 #import "DataManager.h"
 #import "CategoriesTableViewController.h"
 
-@interface AppDelegate ()
-
-@end
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [DataManager loadData];
-    
     _categTableViewController = [[CategoriesTableViewController alloc] initWithStyle:UITableViewStylePlain];
     _navController = [[UINavigationController alloc] initWithRootViewController:_categTableViewController];
 

@@ -7,19 +7,117 @@
 //
 
 #import "CategoriesTableViewController.h"
+#import "ProductsTableViewController.h"
+#import "DataManager.h"
+#import "Categorie.h"
+
+
+
+#define NB_SECTION 1
+static NSString *kCellIdentifier = @"categorieCell";
+
+
 
 @interface CategoriesTableViewController ()
-
+{
+    DataManager *dataManager;
+    ProductsTableViewController *productsTableViewController;
+}
 @end
+
+
 
 @implementation CategoriesTableViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    [self setTitle:NSLocalizedString(@"Categories_Title", nil)];
+    [[self tableView] setDataSource:self];
+    [[self tableView] setDelegate:self];
+    
+    dataManager = [DataManager sharedInstance];
+    
+    CategoriesTableViewController __weak *weakSelf = self;
+    [DataManager loadDataWithCompletionBlock:
+     ^{
+        dispatch_async(dispatch_get_main_queue(),
+        ^{
+             [weakSelf reloadData];
+        });
+     }];
 }
 
-- (void)didReceiveMemoryWarning {
+     
+- (void)reloadData
+{
+    [[self tableView] reloadData];
+}
+
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return NB_SECTION;
+}
+
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [[dataManager categories] count];
+}
+
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier];
+    
+    if (cell == nil)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:kCellIdentifier];
+    }
+    
+    Categorie *currentCategorie = [[dataManager categories] objectAtIndex:indexPath.row];
+    [[cell textLabel] setText:[currentCategorie name]];
+    [[cell detailTextLabel] setText:[NSString stringWithFormat:@"%ld %@", (unsigned long)[[currentCategorie products] count], NSLocalizedString(@"products", nil)]];
+    
+    // If current categorie have 0 product the cell configuration is different to represent it.
+    if ([[currentCategorie products] count] == 0)
+    {
+        [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+        [cell setAccessoryType:UITableViewCellAccessoryNone];
+    }
+    else
+    {
+        [cell setSelectionStyle:UITableViewCellSelectionStyleDefault];
+        [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+    }
+    
+    return cell;
+}
+
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (productsTableViewController == nil)
+    {
+        productsTableViewController = [[ProductsTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    }
+    
+    // Push products table view only if the categorie has products.
+    if ([[[[dataManager categories] objectAtIndex:indexPath.row] products] count] > 0)
+    {
+        [productsTableViewController setCurrentCategorieIndexPath:indexPath];
+        [[self navigationController] pushViewController:productsTableViewController animated:YES];
+    }
+}
+
+
+
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
